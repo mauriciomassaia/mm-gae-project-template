@@ -1,0 +1,28 @@
+application: mm-gae-project-template
+version: 1debug
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: .*
+  script: main.app
+
+includes:
+- debug.yaml
+# - build.yaml
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: latest
+
+skip_files:
+- ^(.*/)?.*.tmp
+- ^(.*/)?.*.sass-cache
+- ^(.*/)?.*node_modules/.*$

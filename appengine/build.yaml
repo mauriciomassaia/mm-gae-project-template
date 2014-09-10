@@ -1,0 +1,28 @@
+env_variables:
+  STATIC_PATH: 'static/dist/'
+  TEMPLATES_PATH: 'templates/dist/'
+
+handlers:
+- url: /scripts
+  static_dir: static/dist/scripts
+
+- url: /images
+  static_dir: static/dist/images
+
+- url: /sounds
+  static_dir: static/dist/sounds
+
+- url: /videos
+  static_dir: static/dist/videos
+
+# we are using sass so it will be always compiled
+- url: /styles
+  static_dir: static/dist/styles
+
+- url: /fonts
+  static_dir: static/dist/fonts
+
+
+skip_files:
+- ^(.*/)?.*/static/source/.*$
+- ^(.*/)?.*/templates/source/.*$
