@@ -1,13 +1,40 @@
-# [![Web Starter Kit](https://cloud.githubusercontent.com/assets/170270/3343034/ceef6e92-f899-11e3-96b9-5d9d69d97a00.png)](https://github.com/google/web-starter-kit/releases/latest)
+## Project template with:
 
+[Google Appengine][gae-link]
 
+[Google Web Starter kit][gwsk-link]
+
+[gae-link]: https://developers.google.com/appengine/docs/python
+[gwsk-link]:https://developers.google.com/web/starter-kit/
+### Install the npm dependencies
+
+```
 $ npm install 
+```
 
+### to run the debug version
+Update the appengine/app.yaml file to:
 
-# to run the debug version
-if you dont run this command the style will not work properly.
-$ gulp watch 
+	includes:
+	- debug.yaml
+	#- build.yaml
 
-# to build the optimized version
+run this command to compile sass and lint the javascript.
+```
+$ gulp watch
+```
+
+### to build the optimized version
+Update the appengine/app.yaml file to:
+
+	includes:
+	#- debug.yaml
+	- build.yaml
+
+Run this command to compile Sass and compress front-end files:
+
+```
 $ gulp
+```
 
+Then you can deploy the optimized vertion to appengine.
