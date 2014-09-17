@@ -37,4 +37,4 @@ Run this command to compile Sass and compress front-end files:
 $ gulp
 ```
 
-Then you can deploy the optimized vertion to appengine.
+Then you can deploy the optimized version to appengine.
